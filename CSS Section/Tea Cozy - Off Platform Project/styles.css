@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  font-size: 22px;
+  background-color: black;
+}
+
+/* GENERAL */
+.label {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  margin-bottom: 2em;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* NAVIGATION BAR */
+nav {
+  margin: 0 10px;
+  height: 69px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid seashell;
+}
+
+nav img {
+  height: 50px;
+}
+.nav-link {
+  display: inline-flex;
+  width: 400px;
+  justify-content: space-between;
+}
+.nav-link li {
+  list-style-type: none;
+  /* display: inline-flex;
+  justify-content: space-between;
+  align-items: center; */
+  /* border: 1px solid red; */
+}
+.nav-link a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* MISSION PART */
+.mission-container {
+  width: 1200px;
+  height: 700px;
+  margin: 0 auto;
+}
+.mission-container img {
+  width: inherit;
+  height: inherit;
+}
+.mission-label {
+  position: absolute;
+  width: inherit;
+  height: 100px;
+  margin-top: 300px;
+  background-color: black;
+  line-height: 1.5;
+}
+
+h2,
+h3,
+h4,
+h5,
+p {
+  color: white;
+}
+
+/* MENU */
+.tea-of-the-month-container {
+  max-width: 1000px;
+  margin: 2em auto 0;
+}
+
+.menu-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.menu-item img {
+  height: 200px;
+  width: 300px;
+}
+
+figcaption {
+  text-align: center;
+  color: white;
+  margin: 10px auto 20px;
+}
+
+/* LOCATIONS */
+.location-container {
+  width: 1200px;
+  height: 500px;
+  margin: 2em auto 0;
+  overflow: hidden;
+}
+.location-container img {
+  margin-top: -120px;
+}
+.location-label {
+  position: absolute;
+  width: inherit;
+  /* border: 1px solid green; */
+  margin-top: 40px;
+  /* line-height: 1; */
+}
+.address-box {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* border: 1px solid blue; */
+  width: 980px;
+  margin: calc((1200px - 980px) / 2);
+}
+.address-container {
+  width: 300px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* OUTRO */
+.outro {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.copyright {
+  margin-left: 20px;
+  line-height: 100px;
+}
