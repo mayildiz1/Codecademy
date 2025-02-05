@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-family: "Courier New", Courier, monospace; */
+  font-family: "Poppins";
+  font-size: 16px;
+}
+
+body {
+}
+
+header {
+  padding: 3rem;
+  color: grey;
+  /* background-color: grey; */
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  /* font-size: 2rem; */
+}
+.header i {
+  font-size: 1.4rem;
+}
+
+.main-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  margin-top: 2rem;
+}
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+.main-info-input,
+.result-input {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.result-output {
+  color: red;
+  font-weight: 700;
+  /* display: none; */
+}
+
+button {
+  font-size: 1.5rem;
+  background-color: skyblue;
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+button:hover {
+  background-color: orange;
+  /* color: white; */
+}
+.payment-structure {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  height: 45vh;
+  overflow: scroll;
+}
+/* #resultsTable {
+  width: 75%;
+  margin: 0 auto;
+} */
+
+#resultsTable input {
+  width: 100%;
+  font-size: 1.25rem;
+}
+td {
+  padding: 0.5rem;
+  /* border: 1px solid red; */
+  text-align: center;
+}
+
+th {
+  padding: 1rem;
+}
+
+.principle,
+.monthly_interest,
+.accumulated_interest {
+  color: blue;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  box-shadow: 0px 0px 2.5px black;
+  text-align: center;
+}
+.date,
+.payment,
+.interest {
+  border-radius: 5px;
+  border: 0px solid black;
+  box-shadow: 0px 0px 2.5px black;
+  text-align: center;
+}
+
+footer {
+  display: block;
+  text-align: center;
+  padding: 3rem;
+}
