@@ -11,11 +11,13 @@ html {
 }
 
 body {
+  background-color: white;
 }
 
 header {
-  padding: 3rem;
-  color: grey;
+  padding: 2rem;
+  /* color: rgb(0, 118, 186); */
+  color: black;
   /* background-color: grey; */
 }
 
@@ -31,11 +33,15 @@ header {
 }
 
 .main-info {
-  display: flex;
+  display: block;
+  width: 50%;
   justify-content: center;
+  gap: 2rem;
   align-items: center;
-  font-size: 1.25rem;
-  margin-top: 2rem;
+  font-size: 1rem;
+  margin: 0rem auto 0;
+  /* border: 1px solid red; */
+  color: black;
 }
 .results {
   display: flex;
@@ -43,7 +49,8 @@ header {
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  color: black;
 }
 .main-info-input,
 .result-input {
@@ -52,21 +59,37 @@ header {
   gap: 1rem;
   margin-top: 0.5rem;
 }
+form {
+  border-radius: 5px;
+  border: 0px solid black;
+  box-shadow: 0px 0px 5px black;
+  padding: 1rem;
+}
 
 .result-output {
   color: red;
   font-weight: 700;
+
   /* display: none; */
 }
-
-button {
-  font-size: 1.5rem;
-  background-color: skyblue;
-  border: 1px solid black;
-  padding: 0.5rem;
+.buttons {
+  display: flex;
+  justify-content: space-around;
 }
-button:hover {
-  background-color: orange;
+
+.main-info-button {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 0px solid black;
+  box-shadow: 0px 0px 2.5px black;
+  color: cadetblue;
+  background-color: rgb(239, 239, 239);
+}
+.main-info-button:hover {
+  box-shadow: 0px 0px 5px black;
+  background-color: cadetblue;
+  color: rgb(239, 239, 239);
   /* color: white; */
 }
 .payment-structure {
@@ -75,15 +98,18 @@ button:hover {
   margin-top: 2rem;
   height: 45vh;
   overflow: scroll;
+  border-radius: 5px;
+  border: 0px solid wheat;
+  box-shadow: 0px 0px 5px black;
+  color: black;
 }
-/* #resultsTable {
-  width: 75%;
-  margin: 0 auto;
-} */
-
+#resultsTable {
+  width: 90%;
+  margin: 1rem auto;
+}
 #resultsTable input {
   width: 100%;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 td {
   padding: 0.5rem;
@@ -96,25 +122,47 @@ th {
 }
 
 .principle,
-.monthly_interest,
-.accumulated_interest {
+.monthly-interest,
+.accumulated-interest {
   color: blue;
   /* border: 1px solid black; */
   border-radius: 10px;
-  box-shadow: 0px 0px 2.5px black;
+  /* box-shadow: 0px 0px 2.5px black; */
   text-align: center;
+  padding: 0.25rem;
 }
 .date,
 .payment,
-.interest {
+.interest-rate {
   border-radius: 5px;
   border: 0px solid black;
   box-shadow: 0px 0px 2.5px black;
   text-align: center;
+  padding: 0.25rem;
+}
+
+.addNewRow button {
+  font-size: 2.5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 0px solid black;
+  box-shadow: 0px 0px 2.5px black;
+  margin: 1rem 0 0 1rem;
+  background-color: rgb(239, 239, 239);
+  color: cadetblue;
+  /* display: none; */
+}
+.addNewRow button:hover {
+  box-shadow: 0px 0px 5px black;
+  background-color: cadetblue;
+  color: rgb(239, 239, 239);
 }
 
 footer {
   display: block;
   text-align: center;
-  padding: 3rem;
+  padding: 1rem;
+  color: black;
+  margin-top: 1rem;
 }

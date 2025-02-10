@@ -4,10 +4,10 @@ import {
   paymentInstallments,
   resetFrm,
 } from "./calculator.js";
+import { createTable } from "./initialize.js";
 
 const paymentPlan = document.getElementById("payment-plan");
-
-const default_interest = document.getElementById("interest-rate");
+const default_interest = document.getElementById("default-interest-rate");
 const indemnityDate = new Date(document.getElementById("indemnity-date").value);
 const firstPaymentDate = new Date(
   document.getElementById("first-payment-date").value
@@ -16,6 +16,10 @@ const totalPrinciple = document.getElementById("total-principle");
 
 const populate = document.getElementById("populate");
 const resetBtn = document.getElementById("reset");
+const addTable = document.getElementById("addTable");
+
+const totalInterest = document.getElementById("total-interest");
+const finalDebt = document.getElementById("total-debt");
 
 const payDates = document.querySelectorAll("input.date");
 const payments = document.querySelectorAll("input.payment");
@@ -25,8 +29,8 @@ const monthly_interests = document.querySelectorAll("p.monthly_interest");
 const accumulated_interest = document.querySelectorAll(
   "p.accumulated_interest"
 );
-const totalInterest = document.getElementById("total-interest");
-const finalDebt = document.getElementById("total-debt");
+
+const table = document.getElementById("resultsTable");
 
 function populateTable() {
   let payDateIterator = firstPaymentDate;
@@ -100,6 +104,9 @@ function populateTable() {
   finalDebt.textContent = debtSum + "$";
 }
 
+addTable.addEventListener("click", function (e) {
+  createTable(table, 48, 7);
+});
 populate.addEventListener("click", populateTable);
 resetBtn.addEventListener("click", function (e) {
   resetFrm(paymentPlan);

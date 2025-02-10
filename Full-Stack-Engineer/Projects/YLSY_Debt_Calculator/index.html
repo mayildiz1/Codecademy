@@ -15,8 +15,9 @@
       src="https://kit.fontawesome.com/85e624ca9a.js"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="app.js" defer></script>
+    <script type="module" src="newapp.js" defer></script>
   </head>
+
   <body>
     <header>
       <div class="header">
@@ -24,60 +25,79 @@
         <h1>YLSY DEBT CALCULATOR</h1>
       </div>
     </header>
+
     <main>
       <div class="main-info">
         <form>
           <div class="main-info-input">
             <label for="payment-plan" class="label">Payment Plan:</label>
-            <select name="payment" id="payment-plan">
+            <select id="payment-plan" name="payment">
               <option value="">Please Select</option>
               <option value="4year-100">4 year (1st and 2nd year 100$)</option>
               <option value="4year-evenly">4 year evenly</option>
-              <!-- <option value="custom">Custom</option> -->
+              <option value="custom">Custom</option>
             </select>
           </div>
+
           <div class="main-info-input">
-            <label for="interest-rate" class="label"
-              >Assumed Interest Rate (%):</label
+            <label for="default-interest-rate" class="label"
+              >Default IR (%):</label
             >
             <input
               type="number"
               min="0"
               max="100"
-              id="interest-rate"
+              id="default-interest-rate"
               value="3"
               required
             />
           </div>
+
           <div class="main-info-input">
             <label for="indemnity-date" class="label">Indemnity Date:</label>
             <input type="date" id="indemnity-date" value="2023-03-12" />
           </div>
+
           <div class="main-info-input">
             <label for="first-payment-date" class="label"
               >First Payment Date:</label
             >
             <input type="date" id="first-payment-date" value="2023-07-15" />
           </div>
+
           <br />
+          <hr />
+
           <div class="main-info-input">
             <label for="total-principle" class="label">Total Principle:</label>
             <input type="number" id="total-principle" value="80864.89" />
           </div>
-          <br />
-          <button type="button" id="populate">Populate Data</button>
-          <button type="button" id="reset"">Reset</button>
-        </form>
-      </div>
 
-      <div class="results">
-        <div class="result-input">
-          <p class="label">Total Interest:</p>
-          <p class="result-output" id="total-interest">100$</p>
-        </div>
-        <div class="result-input">
-          <p class="label">Total Debt:</p>
-          <p class="result-output" id="total-debt">100$</p>
+          <br />
+
+          <div class="buttons">
+            <button class="main-info-button" type="button" id="addTable">
+              Add Table
+            </button>
+            <button class="main-info-button" type="button" id="populate">
+              Populate Data
+            </button>
+            <button class="main-info-button" type="button" id="reset">
+              Reset
+            </button>
+          </div>
+        </form>
+
+        <div class="results">
+          <div class="result-input">
+            <p class="label">Total Interest:</p>
+            <p class="result-output" id="total-interest">100$</p>
+          </div>
+
+          <div class="result-input">
+            <p class="label">Total Debt:</p>
+            <p class="result-output" id="total-debt">100$</p>
+          </div>
         </div>
       </div>
 
@@ -94,12 +114,17 @@
               <th scope="col">Accumulated Interest</th>
             </tr>
           </thead>
+          <tbody></tbody>
         </table>
+        <div class="addNewRow">
+          <button type="button" id="addNewRow">+</button>
+          <button type="button" id="deleteLastRow">-</button>
+        </div>
       </div>
     </main>
+
     <footer>
       <h3>Created by MAY</h3>
     </footer>
-    <script src="initialize.js"></script>
   </body>
 </html>
